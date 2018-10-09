@@ -1,24 +1,29 @@
+/* best practises
+font size base at least 16px
+line-height at least 1.2em
+reminder: 48dp min for touch target size (padding)
+32dp margin around touch target
+ */
+
 @charset "utf-8";
 /* CSS Document */
 
-body,td,th,p{
+body,td,th,p,ul,li,nav,h1,h2,h3,h4,h5,h6,a {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
+	font-size: 16px;
 	color: #333;
-	line-height: 1.5;
+	line-height: 1.2em;
 }
 body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
+	max-width: 95%;
+	margin: auto;
 }
-ul, li {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
-}
+
 a {
-	color: orange;
+	/* color: orange; */
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -29,7 +34,6 @@ a img{
 	border: none 0px #fff;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -38,13 +42,13 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-	display: flex;
-	flex-flow: column;
+	/* display: flex;
+	flex-direction: column; */
 }
 #footer {
   background-color: #444;
   color: #aaa;
-  font-size: 8pt;
+  /* font-size: 8pt; */
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
@@ -53,17 +57,16 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
-  height: 80px;
   background-color: #252831;
   text-align:center;
 }
 nav h1 {
   margin: auto;
+	padding: 25px 20px;
 }
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
-  font-weight: 200;
+  font-weight: bold;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
@@ -109,7 +112,7 @@ nav h1 a {
 .filter-options {
   width: 100%;
   height: 50px;
-  background-color: #3397DB;
+  background-color: #252831;
   align-items: center;
 	display: flex;
 	flex-flow: row;
@@ -117,7 +120,6 @@ nav h1 a {
 }
 .filter-options h2 {
   color: white;
-  font-size: 1rem;
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
@@ -138,7 +140,7 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
-  background-color: #f3f3f3;
+  background-color: #fff;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
@@ -149,28 +151,28 @@ nav h1 a {
 }
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
+	border-radius: 20px;
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
+  padding: 20px;
   text-align: left;
   width: 270px;
-	/* flex: 1 1 50%; */
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
+	border-radius: 10px;
   display: block;
   margin: 0;
+	justify-content: center;
   max-width: 100%;
-  min-height: 248px;
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #252831;
   font-family: Arial,sans-serif;
   font-size: 14pt;
-  font-weight: 200;
+  font-weight: bold;
   letter-spacing: 0;
   line-height: 1.3;
   margin: 20px 0 10px;
@@ -181,11 +183,13 @@ nav h1 a {
   font-size: 11pt;
 }
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #252831;
   border-bottom: 3px solid #eee;
+	border-radius: 10px;
   color: #fff;
   display: inline-block;
   font-size: 10pt;
+	font-weight: bold;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
