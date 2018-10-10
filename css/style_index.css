@@ -40,13 +40,17 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	padding-right: 10px;
 }
 #footer {
-  background-color: #444;
-  color: #aaa;
+  background-color: #444444;
+  color: #dbdbdb;
   /* font-size: 8pt; */
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+}
+
+#footer-link {
+	color: #d8d8ff;
 }
 /* ====================== Navigation ====================== */
 nav {
