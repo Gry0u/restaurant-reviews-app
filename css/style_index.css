@@ -1,11 +1,3 @@
-/* best practices
-font size base at least 16px	display: flex;
-	flex-flow: row wrap;
-line-height at least 1.2em
-reminder: 48dp min for touch target size (padding)
-32dp margin around touch target
- */
-
 @charset "utf-8";
 /* CSS Document */
 
@@ -24,7 +16,6 @@ body {
 }
 
 a {
-	/* color: orange; */
 	text-decoration: none;
 }
 a:hover, a:focus {
