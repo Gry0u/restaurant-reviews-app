@@ -1,5 +1,4 @@
 # Restaurant Reviews App
-
 ## Get started
 
 1. Clone or download this repository
@@ -10,14 +9,17 @@
 
 ## Resources
 ### Leafletjs and MapBox
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
+This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.  
+
 ### Starter Code
 From [cloned repository](https://github.com/udacity/mws-restaurant-stage-1):
 - initial HTML
 - initial CSS styling
 - data base helper functions
-- scripts to fetch restaurants information and map.
+- scripts to fetch restaurants information and map.  
+
 ### Other
 References used for styling and accessibility:
 - [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [aria](https://w3c.github.io/using-aria/)
+- [aria](https://w3c.github.io/using-aria/)  
+I also found help on implementing responsive design in this [webinar](https://www.youtube.com/watch?v=92dtrNU1GQc).
