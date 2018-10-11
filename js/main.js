@@ -90,7 +90,8 @@ initMap = () => {
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
-
+  document.getElementById('map').setAttribute('role', 'application');
+  document.getElementById('map').setAttribute('aria-label', 'map');
   updateRestaurants();
 }
 /* window.initMap = () => {
@@ -170,7 +171,7 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -184,7 +185,7 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
-  more.setAttribute('aria-label', 'Link to details');
+  more.setAttribute('aria-label', 'Link to details of restaurant' + restaurant.name);
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 

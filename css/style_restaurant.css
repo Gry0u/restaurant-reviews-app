@@ -91,6 +91,13 @@
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
+h3 {
+  color: #aa5a00;
+  font-size: 20pt;
+  font-weight: 300;
+  letter-spacing: -1px;
+  padding-bottom: 1pt;
+}
 #reviews-list {
   margin: 0;
   padding: 0;

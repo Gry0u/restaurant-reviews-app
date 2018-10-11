@@ -137,7 +137,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   //a11y attributes
   container.setAttribute('aria-label', 'reviews');
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
@@ -182,9 +182,9 @@ createReviewHTML = (review) => {
  * Add restaurant name to the breadcrumb navigation menu
  */
 fillBreadcrumb = (restaurant=self.restaurant) => {
-  const breadcrumb = document.getElementById('breadcrumb');
+  const breadcrumb = document.getElementById('Breadcrumb');
   //a11y attributes
-  breadcrumb.setAttribute('aria-label', 'breadcrumb');
+  breadcrumb.setAttribute('aria-label', 'Breadcrumb');
   breadcrumb.setAttribute('role', 'navigation');
 
   const li = document.createElement('li');
