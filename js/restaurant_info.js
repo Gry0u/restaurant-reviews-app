@@ -94,7 +94,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.className = 'restaurant-img';
   //a11y attribute
   name.setAttribute('aria-label', 'restaurant image');
-  image.setAttribute("alt", restaurant.name);
+  image.setAttribute("alt", "Image of restaurant" + restaurant.name);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
