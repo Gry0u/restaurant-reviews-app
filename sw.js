@@ -1,24 +1,31 @@
 let cacheID = "restaurant-app-v0";
 const urlToCache = [
-  "/",
-  "/index.html",
-  "/restaurant.html",
-  "/css/style_restaurant.css",
-  "/css/style_index.css",
-  "/data/restaurants.json",
-  "/js/dbhelper.js",
-  "/js/main.js",
-  "js/register.js",
-  "js/restaurant_info.js"
+  "./",
+  "./index.html",
+  "./restaurant.html",
+  "./css/style_restaurant.css",
+  "./css/style_index.css",
+  "./data/restaurants.json",
+  "./js/dbhelper.js",
+  "./js/main.js",
+  "./js/register.js",
+  "./js/restaurant_info.js"
 ];
 
 //create cache and put URLs in cache
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(cacheID).then(cache => {
-      return cache.addAll(urlToCache).catch(err => {
-        console.log("cache opening failed" + err);
-      });
+    caches
+    .open(cacheID)
+    .then(cache => {
+      return cache
+        .addAll(urlToCache)
+        .then(function() {
+          console.log('success');
+        })
+        .catch(err => {
+          console.log("cache opening failed" + err);
+        });
     })
   );
 })
