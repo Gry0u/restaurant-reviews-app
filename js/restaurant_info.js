@@ -33,6 +33,8 @@ initMap = () => {
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
   });
+  document.getElementById('map').setAttribute('role', 'application');
+  document.getElementById('map').setAttribute('aria-label', 'map');
 }
 
 /* window.initMap = () => {
@@ -81,17 +83,22 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
+  name.setAttribute('aria-label', ' restaurant name');
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
+  name.setAttribute('aria-label', ' restaurant address');
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
+  //a11y attribute
+  name.setAttribute('aria-label', 'restaurant image');
   image.setAttribute("alt", restaurant.name);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
+  name.setAttribute('aria-label', 'cuisine type');
   cuisine.innerHTML = restaurant.cuisine_type;
 
   // fill operating hours
@@ -107,6 +114,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
  */
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
   const hours = document.getElementById('restaurant-hours');
+  hours.setAttribute('aria-label', 'opening hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
 
@@ -127,6 +135,8 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
+  //a11y attributes
+  container.setAttribute('aria-label', 'reviews');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
@@ -173,6 +183,10 @@ createReviewHTML = (review) => {
  */
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
+  //a11y attributes
+  breadcrumb.setAttribute('aria-label', 'breadcrumb');
+  breadcrumb.setAttribute('role', 'navigation');
+
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);
