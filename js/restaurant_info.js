@@ -183,9 +183,9 @@ createReviewHTML = (review) => {
  */
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
-  //a11y attributes
-  breadcrumb.setAttribute('aria-label', 'Breadcrumb');
-  breadcrumb.setAttribute('role', 'navigation');
+  //a11y attributes for nav breadcrumb element
+  breadcrumb.previousElementSibling.setAttribute('aria-label', 'Breadcrumb');
+  breadcrumb.previousElementSibling.setAttribute('role', 'navigation');
 
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
